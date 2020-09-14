@@ -1,28 +1,18 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
-    # loop through n-1 elements
-    for i in range(len(arr)):
-        cur_index = i
-        smallest_index = cur_index
-
-        # loop through the remaining indices
-        # that come after the current index
-        for j in range(cur_index+1, len(arr)):
-            # compare the object at index j
-            # to the current smallest object
-            if arr[j] < arr[smallest_index]:
-                smallest_index = j
-        # get the value at the current index
-        cur_obj = arr[cur_index]
-        # get the smallest value
-        smallest = arr[smallest_index]
-        # set the current index to the smallest value
-        arr[cur_index] = smallest
-        # set the index with the smallest value 
-        # to the current index's value
-        arr[smallest_index] = cur_obj
+    # set starting index
+    # iterate through the array
+    for i in range(len(arr)-1):
+        # set the index for the next value
+        counter = 1
+        for j in range(i, len(arr)-1):
+            following = i + counter
+            if arr[i] > arr[following]:
+                arr[i], arr[following] = arr[following], arr[i]
+            counter += 1
 
     return arr
+
 
 
 # TO-DO:  implement the Bubble Sort function below

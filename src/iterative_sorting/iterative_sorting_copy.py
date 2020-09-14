@@ -1,6 +1,15 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
-
+    # set starting index
+    # iterate through the array
+    for i in range(len(arr)-1):
+        # set the index for the next value
+        counter = 1
+        for j in range(i, len(arr)-1):
+            following = i + counter
+            if arr[i] > arr[following]:
+                arr[i], arr[following] = arr[following], arr[i]
+            counter += 1
 
     return arr
 

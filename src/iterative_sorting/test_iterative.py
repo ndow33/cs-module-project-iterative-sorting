@@ -1,6 +1,6 @@
 import unittest
 import random
-from iterative_sorting import *
+from iterative_sorting_copy import *
 
 class IterativeSortingTest(unittest.TestCase):
     def test_selection_sort(self):
