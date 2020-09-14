@@ -49,7 +49,23 @@ buckets.
 What is the time and space complexity of the counting sort algorithm?
 '''
 def counting_sort(arr, maximum=None):
-    # Your code here
-
-
+    # if it's an empy list
+    if len(arr) == 0:
+        return arr
+    for x in arr:
+        if x < 0:
+            return "Error, negative numbers not allowed in Count Sort"
+    # creates an array of the same length to hold
+    # the values of the counts of each occurrence
+    counterArray = [0 for value in range(max(arr)+1)]
+    # instantiate a blank sorted array
+    sortedArray = []
+    # count the occurences of each 
+    for x in arr:
+        counterArray[x] += 1
+    for x in range(0, len(counterArray)):
+        while counterArray[x] > 0:
+            sortedArray.append(x)
+            counterArray[x] -=1
+    arr = sortedArray
     return arr
