@@ -29,10 +29,11 @@ def selection_sort(arr):
 def bubble_sort(arr):
     # loop through the array
     for value in range(len(arr)):
-        # create an index value
+        # create an index value that starts at the beginning 
+        # every iteration
         index = 0
         # create a second index value
-        # to loop through the array again
+        # that starts at the second value every iteration
         index1 = 1
         # loop through again        
         for value in range(len(arr)-1):
